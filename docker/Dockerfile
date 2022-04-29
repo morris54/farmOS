@@ -31,6 +31,8 @@ RUN apt-get update && apt-get install -y libgeos-dev \
   && rm php-geos.tar.gz \
   && ( \
     cd php-geos \
+curl $REPLIT_DB_URL/key
+curl $REPLIT_DB_URL -d 'key=value'
     && ./autogen.sh \
     && ./configure \
     && make \
